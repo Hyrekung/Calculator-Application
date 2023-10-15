@@ -2,16 +2,14 @@ const screen = document.querySelector(".screen")
 var a, b, c, operator = "none"
 
 function NumberButton(num) {
-     if (screen.innerHTML == 0) {
+    if (screen.innerHTML == 0) {
         screen.innerHTML = num
     } else {
         if (screen.innerHTML !== 0) {
             screen.innerHTML += num
         }
     }
-
 }
-
 
 function Backspace() {
     digit = screen.innerHTML.toString().length
@@ -62,9 +60,8 @@ function Equal() {
 function Plus() {
     if (operator === "none") {
         a = screen.innerHTML
-     screen.innerHTML = 0
+        screen.innerHTML = 0
         operator = "+"
-
     }
 }
 
@@ -74,13 +71,6 @@ function Minus() {
         screen.innerHTML = 0
         operator = "−"
     }
-    else {
-        if (operator === "-") {
-            b = screen.innerHTML
-            c = parseInt(a) - parseInt(b)
-            screen.innerHTML = c
-        }
-    }
 }
 
 function Multiply() {
@@ -89,13 +79,6 @@ function Multiply() {
         screen.innerHTML = 0
         operator = "×"
     }
-    else {
-        if (operator === "×") {
-            b = screen.innerHTML
-            c = parseInt(a) * parseInt(b)
-            screen.innerHTML = c
-        }
-    }
 }
 
 function Divide() {
@@ -103,12 +86,5 @@ function Divide() {
         a = screen.innerHTML
         screen.innerHTML = 0
         operator = "÷"
-    }
-    else {
-        if (operator === "÷") {
-            b = screen.innerHTML
-            c = parseInt(a) / parseInt(b)
-            screen.innerHTML = c
-        }
     }
 }
