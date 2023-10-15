@@ -33,10 +33,12 @@ function Equal() {
         b = screen.innerHTML
         c = parseInt(a) + parseInt(b)
         screen.innerHTML = c
+        operator = "none"
     } else if (operator === "−") {
         b = screen.innerHTML
         c = parseInt(a) - parseInt(b)
         screen.innerHTML = c
+        operator = "none"
     }
     //alert("a = "+ a + ", b = "+ b + ", c = " +c+ ", operator = " + operator)
 }
