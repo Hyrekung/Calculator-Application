@@ -20,6 +20,14 @@ function NumberButton(num) {
 
 //}
 
+function Backspace() {
+    digit = (screen.innerHTML + "").length
+    screen.innerHTML = (screen.innerHTML + "").slice(0, digit - 1)
+    if (screen.innerHTML == "") {
+        screen.innerHTML = 0
+    }
+}
+
 function Clear() {
     screen.innerHTML = 0
     operator = "none"
