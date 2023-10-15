@@ -39,16 +39,22 @@ function Equal() {
         c = parseInt(a) - parseInt(b)
         screen.innerHTML = c
         operator = "none"
-    } else if (operator === "×"){
+    } else if (operator === "×") {
         b = screen.innerHTML
         c = parseInt(a) * parseInt(b)
         screen.innerHTML = c
         operator = "none"
-    } else if(operator === "÷"){
+    } else if (operator === "÷") {
         b = screen.innerHTML
         c = parseInt(a) / parseInt(b)
-        screen.innerHTML = c
-        operator = "none"
+        if (c - Math.floor(c) !== 0) {
+            screen.innerHTML = c.toFixed(5)
+            operator = "none"
+        }
+        else {
+            screen.innerHTML = c
+            operator = "none"
+        }
     }
     //alert("a = "+ a + ", b = "+ b + ", c = " +c+ ", operator = " + operator)
 }
