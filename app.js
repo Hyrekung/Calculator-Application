@@ -6,17 +6,17 @@ function NumberButton(num) {
     if (screen.innerHTML == 0) {
         screen.innerHTML = num
     } else {
-       // if (operator !== "none") {
-           // screen.innerHTML = num
-            if(screen.innerHTML !== 0){
-                screen.innerHTML += num
-            }
+        // if (operator !== "none") {
+        // screen.innerHTML = num
+        if (screen.innerHTML !== 0) {
+            screen.innerHTML += num
         }
-       // if (operator === "none") {
-         //   screen.innerHTML += num
-        //}
-
     }
+    // if (operator === "none") {
+    //   screen.innerHTML += num
+    //}
+
+}
 
 //}
 
@@ -32,6 +32,10 @@ function Equal() {
     if (operator === "+") {
         b = screen.innerHTML
         c = parseInt(a) + parseInt(b)
+        screen.innerHTML = c
+    } else if (operator === "−") {
+        b = screen.innerHTML
+        c = parseInt(a) - parseInt(b)
         screen.innerHTML = c
     }
     //alert("a = "+ a + ", b = "+ b + ", c = " +c+ ", operator = " + operator)
@@ -61,5 +65,20 @@ function Plus() {
 
         }
         // alert("a = " + a + ", b = " + b + ", c = " + c + ", operator = " + operator)
+    }
+}
+
+function Minus() {
+    if (operator === "none") {
+        a = screen.innerHTML
+        screen.innerHTML = 0
+        operator = "−"
+    }
+    else {
+        if (operator === "-") {
+            b = screen.innerHTML
+            c = parseInt(a) - parseInt(b)
+            screen.innerHTML = c
+        }
     }
 }
