@@ -39,6 +39,16 @@ function Equal() {
         c = parseInt(a) - parseInt(b)
         screen.innerHTML = c
         operator = "none"
+    } else if (operator === "×"){
+        b = screen.innerHTML
+        c = parseInt(a) * parseInt(b)
+        screen.innerHTML = c
+        operator = "none"
+    } else if(operator === "÷"){
+        b = screen.innerHTML
+        c = parseInt(a) / parseInt(b)
+        screen.innerHTML = c
+        operator = "none"
     }
     //alert("a = "+ a + ", b = "+ b + ", c = " +c+ ", operator = " + operator)
 }
@@ -80,6 +90,36 @@ function Minus() {
         if (operator === "-") {
             b = screen.innerHTML
             c = parseInt(a) - parseInt(b)
+            screen.innerHTML = c
+        }
+    }
+}
+
+function Multiply() {
+    if (operator === "none") {
+        a = screen.innerHTML
+        screen.innerHTML = 0
+        operator = "×"
+    }
+    else {
+        if (operator === "×") {
+            b = screen.innerHTML
+            c = parseInt(a) * parseInt(b)
+            screen.innerHTML = c
+        }
+    }
+}
+
+function Divide() {
+    if (operator === "none") {
+        a = screen.innerHTML
+        screen.innerHTML = 0
+        operator = "÷"
+    }
+    else {
+        if (operator === "÷") {
+            b = screen.innerHTML
+            c = parseInt(a) / parseInt(b)
             screen.innerHTML = c
         }
     }
